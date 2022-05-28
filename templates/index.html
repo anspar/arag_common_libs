@@ -1,0 +1,33 @@
+
+{{!-- bootstrap 5 --}}
+{{import_css_web "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"}}
+{{import_js_web "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"}}
+
+{{!-- fontawesome free 6.1.1 --}}
+{{import_css "static/fontawesome-free-6.1.1-web/css/all.min.css"}}
+{{import_js "static/fontawesome-free-6.1.1-web/js/all.min.js"}}
+
+{{!-- ethers 5 --}}
+{{import_js_web "https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"}}
+
+{{!-- jquery 3.6.0 --}}
+{{import_js_web "https://code.jquery.com/jquery-3.6.0.min.js"}}
+
+{{import_css "static/css/index.css"}}
+
+{{#unless release}}
+{{live_update}}
+
+<div class="container ar-bg-light h-75">
+    <button class="btn btn-sm ar-btn-primary loading ar-shadow">button</button>
+    <button class="btn btn-sm ar-btn-primary m-5">button2</button>
+    <button class="btn btn-sm ar-btn-secondary">button3</button>
+    <button class="btn btn-sm btn-primary">button4</button>
+    <button class="btn btn-sm btn-secondary ar-btn">button5</button>
+    <i class="fab fa-affiliatetheme fa-2x ar-bg-dark ar-text-light"></i>
+</div>
+
+<span class="ar-theme-switch m-5"></span>
+{{/unless}}
+
+{{import_js "static/js/index.js"}}

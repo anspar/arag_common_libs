@@ -1,0 +1,80 @@
+:root{
+    --ar-dark: #1c2541;
+    --ar-dark-dim: #3a506b1a;
+    --ar-light: #fffffff9;
+    --ar-light-dim: #ffffffa0;
+    --ar-success: #a1c181;
+    --ar-danger: #de3f4f;
+    --ar-warning: #fcca46;
+    --ar-shadow: drop-shadow(0 3px 8px var(--ar-dark-dim));
+    --ar-primary: #5bc0be;
+    --ar-secondary: #3a506b;
+}
+
+[theme-dark=dark]{
+    --ar-light: #1c2541;
+    --ar-light-dim: #3a506b1a;
+    --ar-dark: #fffffff9;
+    --ar-dark-dim: #ffffffa0;
+}
+
+.ar-btn-primary{
+    background-color: var(--ar-primary);
+    color: white;
+}
+
+.ar-btn-secondary{
+    background-color: var(--ar-secondary);
+    color: white;
+}
+
+.ar-btn-primary:hover, .ar-btn-secondary:hover, .ar-btn:hover{
+    transform: scale(1.03);
+    color: var(--ar-light);
+}
+
+.ar-bg-light{
+    background-color: var(--ar-light);
+}
+
+.ar-bg-dark{
+    background-color: var(--ar-dark);
+}
+
+.ar-text-light{
+    color: var(--ar-light);
+}
+
+.ar-text-dark{
+    color: var(--ar-dark);
+}
+
+.ar-shadow{
+    filter: var(--ar-shadow);
+}
+
+.loading{
+    color: transparent !important;
+    background: linear-gradient(80deg, var(--ar-light) 30%, var(--ar-primary) 50%, var(--ar-light) 70%);
+    /* opacity: 0.4; */
+    background-size: 400%;
+    animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+    from{
+        background-position: 100% 50%;
+    }to{
+        background-position: 0% 100%;
+    }
+}
+
+span.ar-theme-switch>.fa-certificate{
+    color: var(--ar-warning);
+    cursor: pointer;
+}
+
+span.ar-theme-switch>.fa-moon{
+    color: var(--ar-secondary);
+    cursor: pointer;
+}
