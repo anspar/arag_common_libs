@@ -6,14 +6,9 @@
 
 
 ### Import 
-1. In html file
+In html file
 ```
     {{web_component "https://github.com/anspar/arag_common_libs/releases/download/<release-version>/build.html"}}
-```
-2. In arag.yml
-```
-    dependencies:
-        - https://github.com/anspar/arag_common_libs/releases/download/<release-version>/build.html
 ```
 #### OR
 Download the `build.html` file and add it to the project with
@@ -25,13 +20,14 @@ Download the `build.html` file and add it to the project with
 
     jquery 3.6.0
     bootstrap@5.0.2
-    fontawesome-free-6.1.1
     ethers-5
 
 
 
 ### Available Classes
-`ar-btn-primary` | `ar-btn-secondary` | `ar-bg-light` | `ar-bg-dark` | `ar-text-light` | `ar-text-dark` | `ar-shadow` | `loading`
+`ar-btn-primary` | `ar-btn-secondary` | `ar-bg-light` | `ar-bg-dark` | `ar-text-light` | `ar-text-dark` | `ar-shadow` | `loading` | `pointer`  & many more
+
+Check [css](static/css) folder for full list
 
 ### Available Colors
     --ar-dark: #1c2541;
@@ -46,7 +42,7 @@ Download the `build.html` file and add it to the project with
 
 
 ### Add theme switch
-`<span class="ar-theme-switch"></span>`
+`<div class="ar-theme-switch" style="width: 30px;"></div>`
 
 
 ## Ask question at [Discord](https://discord.gg/ENQfPEcrZJ)

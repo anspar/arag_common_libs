@@ -3,10 +3,6 @@
 {{import_css_web "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"}}
 {{import_js_web "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"}}
 
-{{!-- fontawesome free 6.1.1 --}}
-{{import_css "static/fontawesome-free-6.1.1-web/css/all.min.css"}}
-{{import_js "static/fontawesome-free-6.1.1-web/js/all.min.js"}}
-
 {{!-- ethers 5 --}}
 {{import_js_web "https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"}}
 
@@ -14,20 +10,52 @@
 {{import_js_web "https://code.jquery.com/jquery-3.6.0.min.js"}}
 
 {{import_css "static/css/index.css"}}
+{{import_css "static/css/fonts.css"}}
+{{import_css "static/css/animations.css"}}
 
 {{#unless release}}
 {{live_update}}
 
 <div class="container ar-bg-light h-75">
     <button class="btn btn-sm ar-btn-primary loading ar-shadow">button</button>
-    <button class="btn btn-sm ar-btn-primary m-5">button2</button>
-    <button class="btn btn-sm ar-btn-secondary">button3</button>
-    <button class="btn btn-sm btn-primary">button4</button>
-    <button class="btn btn-sm btn-secondary ar-btn">button5</button>
-    <i class="fab fa-affiliatetheme fa-2x ar-bg-dark ar-text-light"></i>
+    <button class="btn btn-sm ar-btn-primary m-5 text-size-sm">button2</button>
+    <button class="btn btn-sm ar-btn-secondary text-size-n">button3</button>
+    <button class="btn btn-sm btn-primary text-size-l">button4</button>
+    <button class="btn btn-sm btn-secondary ar-btn text-size-xl">button5</button>
 </div>
 
-<span class="ar-theme-switch m-5"></span>
+<div class="ar-theme-switch m-5" style="width: 20px;"></div>
 {{/unless}}
+<script>
+    $(document).ready(()=>{
+        if($("div.ar-theme-switch").length===0) return
+        let is_theme_dark = localStorage.getItem("ar-theme")==="dark";
 
-{{import_js "static/js/index.js"}}
+        if(is_theme_dark){
+            $(":root").attr("theme-dark", "dark");
+            localStorage.setItem("ar-theme", "dark")
+        }
+        
+        $(`div.ar-theme-switch`).html(`
+            <img moon src="{{import_img "static/imgs/moon-solid.png"}}" 
+                alt="switch-moon" class="pointer ${is_theme_dark? "d-none":""}">
+            <img sun src="{{import_img "static/imgs/certificate-solid.png"}}" 
+                alt="switch-sun" class="pointer ${!is_theme_dark? "d-none":""}">
+        `)
+
+        $("div.ar-theme-switch").on("click", function(){
+            if($(":root").attr("theme-dark")==="dark"){
+                $(":root").attr("theme-dark", "light");
+                localStorage.setItem("ar-theme", "light")
+                $("div.ar-theme-switch>img[sun]").addClass("d-none");
+                $("div.ar-theme-switch>img[moon]").removeClass("d-none");
+                return
+            }
+            $(":root").attr("theme-dark", "dark");
+            localStorage.setItem("ar-theme", "dark")
+            $("div.ar-theme-switch>img[moon]").addClass("d-none");
+            $("div.ar-theme-switch>img[sun]").removeClass("d-none");
+        })
+    })
+</script>
+{{import_js "static/js/animations.js"}}

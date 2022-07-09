@@ -53,28 +53,23 @@
     filter: var(--ar-shadow);
 }
 
-.loading{
-    color: transparent !important;
-    background: linear-gradient(80deg, var(--ar-light) 30%, var(--ar-primary) 50%, var(--ar-light) 70%);
-    /* opacity: 0.4; */
-    background-size: 400%;
-    animation: loading 1.5s ease-in-out infinite;
-}
-
-@keyframes loading {
-    from{
-        background-position: 100% 50%;
-    }to{
-        background-position: 0% 100%;
-    }
-}
-
-span.ar-theme-switch>.fa-certificate{
-    color: var(--ar-warning);
+.pointer{
     cursor: pointer;
 }
 
-span.ar-theme-switch>.fa-moon{
-    color: var(--ar-secondary);
-    cursor: pointer;
+.wrapword {
+    white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    white-space: pre-wrap;       /* css-3 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+    word-break: break-all;
+    white-space: normal;
+}
+
+div.ar-theme-switch img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
