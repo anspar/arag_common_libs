@@ -44,6 +44,16 @@ Check [css](static/css) folder for full list
 ### Add theme switch
 `<div class="ar-theme-switch" style="width: 30px;"></div>`
 
+### Display messages to users
+
+`showMsg("your message", "primary", 10)` // 10 sec
+
+`showMsg("warning message", "warning", 60)` // 1 min
+
+`showMsg("important message", "danger", null)` // user must dismiss it
+
+
+
 
 ## Ask question at [Discord](https://discord.gg/ENQfPEcrZJ)
 

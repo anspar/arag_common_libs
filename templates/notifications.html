@@ -1,0 +1,43 @@
+<style>
+    .fade-bottom{
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: var(--ar-light);
+        animation: fade-in-bottom 0.5s 1;
+    }
+</style>
+
+<div style="position: fixed; bottom: 0; left: 0; width: 100%; z-index: 99999; max-height: 10%; min-height: 3%;" 
+        class="d-none align-items-end" id="user-msg-div">
+    <ul class="w-100 no-default-style" id="user-msg-ul"></ul>
+</div>
+
+<script>
+    let map = new Map()
+
+    function removeMsg(id){
+        let msg = $(`#${id} span`).html();
+        $(`#${id}`).remove()
+        if($("#user-msg-ul").children().length===0) $("#user-msg-div").addClass("d-none").removeClass("d-flex")
+        map.delete(msg)
+    }
+
+    function showMsg(msg, type, sec){
+        if(map.get(msg)) return
+        $("#user-msg-div").removeClass("d-none").addClass("d-flex")
+        let id = `msg-${new Date().getTime()}`
+        $("#user-msg-ul").prepend(`
+            <li class="w-100 d-flex justify-content-center align-items-center fade-bottom" id="${id}" 
+                    style="position: relative; background: var(${type==="primary"?"--ar-primary": `--ar-${type}`})">
+                <span class="text-size-n text-bold mx-4 wrapword" style="color: ${type==="warning"?"black":"var(--ar-light)"}">${msg}</span>
+                <span class="zoom-hover ar-text-light text-bold pointer" style="position: absolute; right: 10px;" onclick="removeMsg('${id}')">X</span>
+            </li>
+        `)
+        map.set(msg, true);
+        if (sec===null) return
+        setTimeout(()=>{
+           removeMsg(id)
+        }, sec*1000)
+        return id
+    }
+</script>
