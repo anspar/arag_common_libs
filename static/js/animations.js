@@ -39,6 +39,10 @@ const obsOptions = {root:null};
 const Obs = new IntersectionObserver(inViewport);
 
 $(document).ready(()=>{
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+    
     const ELs_inViewport = document.querySelectorAll('[data-anim]');
             ELs_inViewport.forEach(EL => {
             Obs.observe(EL, obsOptions);

@@ -37,16 +37,56 @@
     background-color: var(--ar-light);
 }
 
-.ar-bg-dark{
-    background-color: var(--ar-dark);
-}
-
 .ar-text-light{
     color: var(--ar-light);
 }
 
+.ar-bg-dark{
+    background-color: var(--ar-dark);
+}
+
 .ar-text-dark{
     color: var(--ar-dark);
+}
+
+.ar-bg-primary{
+    background-color: var(--ar-primary);
+}
+
+.ar-text-primary{
+    color: var(--ar-primary);
+}
+
+.ar-bg-secondary{
+    background-color: var(--ar-secondary);
+}
+
+.ar-text-secondary{
+    color: var(--ar-secondary);
+}
+
+.ar-bg-danger{
+    background-color: var(--ar-danger);
+}
+
+.ar-text-danger{
+    color: var(--ar-danger);
+}
+
+.ar-bg-success{
+    background-color: var(--ar-success);
+}
+
+.ar-text-success{
+    color: var(--ar-success);
+}
+
+.ar-bg-warning{
+    background-color: var(--ar-warning);
+}
+
+.ar-text-warning{
+    color: var(--ar-warning);
 }
 
 .ar-shadow{
