@@ -19,13 +19,13 @@
 }
 
 .ar-btn-primary{
-    background-color: var(--ar-primary);
-    color: white;
+    background-color: var(--ar-primary) !important;
+    color: #fffffff9;
 }
 
 .ar-btn-secondary{
-    background-color: var(--ar-secondary);
-    color: white;
+    background-color: var(--ar-secondary)!important;
+    color: #fffffff9;
 }
 
 .ar-btn-primary:hover, .ar-btn-secondary:hover, .ar-btn:hover{
@@ -34,59 +34,59 @@
 }
 
 .ar-bg-light{
-    background-color: var(--ar-light);
+    background-color: var(--ar-light)!important;
 }
 
 .ar-text-light{
-    color: var(--ar-light);
+    color: var(--ar-light)!important;
 }
 
 .ar-bg-dark{
-    background-color: var(--ar-dark);
+    background-color: var(--ar-dark)!important;
 }
 
 .ar-text-dark{
-    color: var(--ar-dark);
+    color: var(--ar-dark)!important;
 }
 
 .ar-bg-primary{
-    background-color: var(--ar-primary);
+    background-color: var(--ar-primary)!important;
 }
 
 .ar-text-primary{
-    color: var(--ar-primary);
+    color: var(--ar-primary)!important;
 }
 
 .ar-bg-secondary{
-    background-color: var(--ar-secondary);
+    background-color: var(--ar-secondary)!important;
 }
 
 .ar-text-secondary{
-    color: var(--ar-secondary);
+    color: var(--ar-secondary)!important;
 }
 
 .ar-bg-danger{
-    background-color: var(--ar-danger);
+    background-color: var(--ar-danger)!important;
 }
 
 .ar-text-danger{
-    color: var(--ar-danger);
+    color: var(--ar-danger)!important;
 }
 
 .ar-bg-success{
-    background-color: var(--ar-success);
+    background-color: var(--ar-success)!important;
 }
 
 .ar-text-success{
-    color: var(--ar-success);
+    color: var(--ar-success)!important;
 }
 
 .ar-bg-warning{
-    background-color: var(--ar-warning);
+    background-color: var(--ar-warning)!important;
 }
 
 .ar-text-warning{
-    color: var(--ar-warning);
+    color: var(--ar-warning)!important;
 }
 
 .ar-shadow{

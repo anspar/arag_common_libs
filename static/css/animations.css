@@ -8,14 +8,14 @@
 
 .highlight-anim{
     color: rgba(0, 0, 0, 0);
-    /* background: linear-gradient(80deg, rgba(0,0,0,0) 30%, var(--bs-primary) 50%, rgba(0,0,0,0) 70%); */
+    /* background: linear-gradient(80deg, rgba(0,0,0,0) 30%, var(--ar-primary) 50%, rgba(0,0,0,0) 70%); */
     background: radial-gradient(circle, gray 5%, rgba(0,0,0,0) 0%);
     background-size: 400%;
     animation: loading 3.5s ease-in-out infinite;
 }
 
 .highlight-hover-bg:hover{
-    background: var(--bs-primary);
+    background: var(--ar-primary);
     background-size: 400% !important;
     background: linear-gradient(80deg, var(--ar-primary) 30%, var(--ar-primary) 50%, transparent 70%);
     animation: loading 0.3s ease-in-out 1 !important;
@@ -110,7 +110,7 @@
 }
 
 .zoom-hover-bg:hover {
-    background: var(--bs-light);
+    background: var(--ar-light);
     border-radius: 5px;
     border-style: none;
     transform: scale(1.03);
@@ -133,33 +133,33 @@
 }
 
 .item_primary_blink {
-    color: var(--bs-primary);
+    color: var(--ar-primary);
     animation: blink 3s linear infinite;
 }
 
 @keyframes blink {
     0% {
-        color: var(--bs-primary);
+        color: var(--ar-primary);
         opacity: 1;
     }
 
     25% {
-        color: var(--bs-dark);
+        color: var(--ar-dark);
         opacity: 0.3;
     }
 
     50% {
-        color: var(--bs-primary);
+        color: var(--ar-primary);
         opacity: 1;
     }
 
     75% {
-        color: var(--bs-dark);
+        color: var(--ar-dark);
         opacity: 0.3;
     }
 
     100% {
-        color: var(--bs-primary);
+        color: var(--ar-primary);
         opacity: 1;
     }
 }
