@@ -89,8 +89,16 @@
     color: var(--ar-warning)!important;
 }
 
+.ar-shadow-lg{
+    box-shadow: 0px 3px 10px 4px var(--ar-dark-dim);
+}
+
 .ar-shadow{
-    filter: var(--ar-shadow);
+    box-shadow: 0px 2px 8px 2px var(--ar-dark-dim);
+}
+
+.ar-shadow-sm{
+    box-shadow: 0px 2px 8px 0px var(--ar-dark-dim);
 }
 
 .pointer{
