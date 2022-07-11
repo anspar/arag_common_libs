@@ -1,6 +1,6 @@
 # Arag Common Libs 
 
-## Collection of frequently used libs for [Arag](https://github.com/anspar/arag) dapps.
+## Collection of frequently used libs for [Arag](https://github.com/anspar/arag) nApps.
 
 ![release](https://github.com/anspar/arag_common_libs/actions/workflows/release.yml/badge.svg?branch=main)
 
@@ -11,9 +11,9 @@ In html file
     {{web_component "https://github.com/anspar/arag_common_libs/releases/download/<release-version>/build.html"}}
 ```
 #### OR
-Download the `build.html` file and add it to the project with
+Download the `lib.html` file and add it to the project with
 ```
-    {{import_content "path/to/build.html"}}
+    {{import_content "path/to/lib.html"}}
 ```
 
 ### Included Libs
@@ -21,7 +21,6 @@ Download the `build.html` file and add it to the project with
     jquery 3.6.0
     bootstrap@5.0.2
     ethers-5
-
 
 
 ### Available Classes
@@ -51,9 +50,6 @@ Check [css](static/css) folder for full list
 `showMsg("warning message", "warning", 60)` // 1 min
 
 `showMsg("important message", "danger", null)` // user must dismiss it
-
-
-
 
 ## Ask question at [Discord](https://discord.gg/ENQfPEcrZJ)
 
