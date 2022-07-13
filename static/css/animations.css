@@ -6,7 +6,7 @@
     animation: loading 1.5s ease-in-out infinite;
 }
 
-.highlight-anim{
+.dot-slide-anim{
     color: rgba(0, 0, 0, 0);
     /* background: linear-gradient(80deg, rgba(0,0,0,0) 30%, var(--ar-primary) 50%, rgba(0,0,0,0) 70%); */
     background: radial-gradient(circle, gray 5%, rgba(0,0,0,0) 0%);
@@ -19,6 +19,14 @@
     background-size: 400% !important;
     background: linear-gradient(80deg, var(--ar-primary) 30%, var(--ar-primary) 50%, transparent 70%);
     animation: loading 0.3s ease-in-out 1 !important;
+}
+
+.highlight-hover-primary:hover {
+    color: var(--ar-primary) !important;
+}
+
+.highlight-hover-secondary:hover {
+    color: var(--ar-secondary) !important;
 }
 
 @keyframes loading {
